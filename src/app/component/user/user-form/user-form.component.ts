@@ -29,10 +29,7 @@ export class UserFormComponent implements OnInit {
   }
 
   submit(){
-    console.log("name : "+this.userForm.controls.name.value);
-    console.log("email : "+this.userForm.controls.email.value);
-    console.log("role : "+this.userForm.controls.role.value);
-    console.log("age : "+this.userForm.controls.years.value);
+
     this.user.name=this.userForm.controls.name.value;
     this.user.email=this.userForm.controls.email.value;
     this.user.role=this.userForm.controls.role.value;
