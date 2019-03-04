@@ -1,3 +1,5 @@
-<p>
-  user-new works!
-</p>
+<div>
+    <div *ngIf="newUser">
+        <app-user-form [user]="newUser" (handleSubmit)="saveUser($event)"></app-user-form>
+    </div>
+</div>

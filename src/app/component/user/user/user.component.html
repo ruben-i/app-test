@@ -1,4 +1,5 @@
 <div class="contenido">
-  <app-user-list [userList]="users"></app-user-list>
+  <app-user-search (searchUser)="search($event)"></app-user-search>
+  <app-user-list [userList]="users" (deleteUser)="delete($event)"></app-user-list>
   <button routerLink="/new" class="button is-primary">Nuevo</button>
 </div>

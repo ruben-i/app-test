@@ -1,3 +1,29 @@
-<p>
-  user-form works!
-</p>
+<div>
+  <div class="formulario">
+    <form [formGroup]="userForm">
+      <div class="field">
+          <label class="label" [class.is-invalid]="userForm.controls.name.invalid && userForm.controls.name.touched">Nombre</label>
+          <input type="text" formControlName="name" class="input" [class.is-invalid]="userForm.controls.name.invalid && userForm.controls.name.touched"/>        
+   
+      </div>
+      <div class="field">
+          <label class="label" [class.is-invalid]="userForm.controls.email.invalid && userForm.controls.email.touched">Correo</label>
+          <input type="text" formControlName="email" class="input" [class.is-invalid]="userForm.controls.email.invalid && userForm.controls.email.touched"/>        
+      </div>
+      <div class="field">
+          <label class="label" [class.is-invalid]="userForm.controls.role.invalid && userForm.controls.role.touched">Rol</label>
+          <input type="text"  formControlName="role" class="input" [class.is-invalid]="userForm.controls.role.invalid && userForm.controls.role.touched"/>        
+      </div>
+      <div class="field">
+        <label class="label" [class.is-invalid]="userForm.controls.years.invalid && userForm.controls.years.touched">Edad</label>
+        <input type="text" formControlName="years" class="input" [class.is-invalid]="userForm.controls.years.invalid && userForm.controls.years.touched"/>        
+      </div>
+
+      <div>
+        <button class="button is-primary" [disabled]="userForm.invalid" (click)="submit()">Guardar</button>
+        <button routerLink="/" class="button is-warning">Cancelar</button>
+      </div>
+  </form>
+  
+  </div>
+</div>

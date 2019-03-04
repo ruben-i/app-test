@@ -1,3 +1,5 @@
-<p>
-  user-edit works!
-</p>
+<div>
+    <div *ngIf = "userEdit">
+      <app-user-form [user]="userEdit" (handleSubmit)="updateUser($event)"></app-user-form>
+    </div>
+</div>

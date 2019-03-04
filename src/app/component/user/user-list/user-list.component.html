@@ -1,8 +1,8 @@
 <div>
-  <div>
+  <div class="contenido">
     <table class="table is-striped">
       <thead>
-          <th *ngFor="let title of titles">{{title}}</th>
+          <th *ngFor="let title of titles">{{title | mayuscula}}</th>
       </thead>
       <tbody>
            <tr *ngFor="let user of userList">
@@ -12,9 +12,8 @@
                 <td>{{user.role}}</td>
                 <td>{{user.years}}</td>
                 <td>
-                  <button class="button is-primary">Edit</button>
-                  <button class="button is-warning">Disable</button>
-                  <button class="button is-danger">Delete</button>
+                  <button class="button is-primary" (click)="handleEdit(user)">Editar</button>
+                  <button class="button is-danger" (click)="handleDelete(user)">Eliminar</button>
                 </td>
            </tr>
       </tbody>

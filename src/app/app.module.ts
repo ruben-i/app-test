@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import {routes} from './app.routing';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule  } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -14,6 +14,8 @@ import { UserNewComponent } from './component/user/user-new/user-new.component';
 import { UserFormComponent } from './component/user/user-form/user-form.component';
 import { HeaderComponent } from './component/main/header/header.component';
 import { UserService } from './service/user.service';
+import { UserSearchComponent } from './component/user/user-search/user-search.component';
+import { MayusculaPipe } from './pipes/mayuscula.pipe';
 
 
 @NgModule({
@@ -24,11 +26,15 @@ import { UserService } from './service/user.service';
     UserListComponent,
     UserEditComponent,
     UserNewComponent,
-    UserFormComponent
+    UserFormComponent,
+    UserSearchComponent,
+    MayusculaPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [UserService],

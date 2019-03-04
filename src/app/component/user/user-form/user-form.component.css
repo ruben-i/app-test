@@ -1,0 +1,9 @@
+.formulario{
+    width: 60%;
+    margin: 0 auto;
+}
+
+.is-invalid{
+    border-color: red;
+    color: red;
+}
